@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import ErrorScreen from '../screens/ErrorScreen';
-import SignUpScreen from '../screens/SignInScreen';
+import SignInScreen from '../screens/SignInScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,7 @@ export default function RootNavigator() {
       />
       <Stack.Screen
         name='SignUp'
-        component={SignUpScreen}
+        component={SignInScreen}
       />
       <Stack.Screen
         name='Error'

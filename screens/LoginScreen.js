@@ -3,18 +3,18 @@ import { View, Text, Button, StyleSheet } from 'react-native'
 import { TextInput } from 'react-native-web';
 
 export default function LoginScreen(props) {
-  // const [username, setUsername] = React.useState("");
-  // const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-  // const onUsernameChange = () => {
-  //   const name = username;
-  //   setUsername(name);
-  // }
+  const onUsernameChange = () => {
+    const name = username;
+    setUsername(name);
+  }
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Login Screen</Text>
-      {/* <View style={styles.containerFields}>
+      <View style={styles.containerFields}>
         <TextInput
           label="Username"
           placeholder="example.name"
@@ -27,12 +27,18 @@ export default function LoginScreen(props) {
           value={password}
           onChangeText={password => setPassword(password)}
         />
-      </View> */}
-      <View style={styles.container}>
+      </View>
+      <View style={styles.containerButtons}>
         <Button
           title="Sign Up"
           onPress={() => {
             props.navigation.navigate("SignUp");
+          }}
+        />
+        <Button
+          title="Log In"
+          onPress={() => {
+            props.navigation.navigate("Error");
           }}
         />
       </View>
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#777",
-    paddingVertical: 12,
+    padding: 12,
   },
   text: {
     fontSize: 18,

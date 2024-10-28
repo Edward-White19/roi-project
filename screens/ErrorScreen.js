@@ -5,6 +5,12 @@ export default function ErrorScreen(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Error Screen</Text>
+      <Button
+        title="Back"
+        onPress={() => {
+          props.navigation.navigate("Login");
+        }}
+      />
     </View>
   )
 }

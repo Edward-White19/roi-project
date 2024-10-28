@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
 
-export default function SignupScreen(props) {
+export default function SignInScreen(props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Signup Screen</Text>
+      <Text style={styles.text}>Sign-Up Screen</Text>
       <Button
-        title="Go Login"
+        title="Back"
         onPress={() => {
           props.navigation.navigate("Login");
         }}
