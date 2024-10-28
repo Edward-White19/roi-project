@@ -1,12 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import LoginScreen from './screens/LoginScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './navigation/RootNavigator';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    // <View style={styles.container}>
+    //   <LoginScreen />
+    //   <StatusBar style="auto" />
+    // </View>
+
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaProvider>
   );
 }
 
