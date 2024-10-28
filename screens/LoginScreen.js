@@ -6,11 +6,6 @@ export default function LoginScreen(props) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const onUsernameChange = () => {
-    const name = username;
-    setUsername(name);
-  }
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Login Screen</Text>
